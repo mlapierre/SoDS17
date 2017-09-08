@@ -1,0 +1,11 @@
+newspaper3k
+beautifulsoup4
+requests
+pypandoc
+clint
+numpy
+scipy # Don't install via pip on windows
+scikit-learn
+jupyter
+matplotlib
+scikit-plot
