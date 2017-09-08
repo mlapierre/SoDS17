@@ -1,5 +1,5 @@
-Classifying Interesting Articles - Experiment 1
------------------------------------------------
+Summer of Data Science 2017 - Classifying Interesting Articles - Experiment 1
+-----------------------------------------------------------------------------
 
 This is an experiment / proof of concept of a classifier that predicts whether an article will be interesting.
 
@@ -19,7 +19,7 @@ I collected a set of less interesting articles from commoncrawl.org, rather than
 
 Given this is a proof of concept there was a bit of manual work up to this point, and then a bit more to make sure none of the 'misses' were actually 'hits'. I.e., I didn't want interesting articles to turn up as misses, so I skimmed through all the misses to make sure they weren't coincidentally interesting (there were a few). The hits and misses then went into separate folders, ready to be loaded by scikit-learn.
 
-Next `analysis1.ipynb` trains a linear support vector machine and a naive bayes classifier. Both showed reasonable precision and recall for a first attempt, but tests on new articles showed that the classifier tended to categorise articles as misses, even if I did find them interesting. This is not particular surprising; most articles I'm exposed to are not particularly interesting, and such simple models trained on a relatively small dataset are unlikely to be exceptionally accurate in identifying them.
+Next `analysis1.ipynb` trains a linear support vector machine and a naive bayes classifier. Both showed reasonable precision and recall upon my first attempt, but tests on new articles showed that the classifier tended to categorise articles as misses, even if I did find them interesting. This is not particularly surprising; most articles I'm exposed to are not particularly interesting, and such simple models trained on a relatively small dataset are unlikely to be exceptionally accurate in identifying them. I spent a little time tuning the models without getting very far but decided to take a step sideways before going further.
 
 Finally, `topic_analysis_hits.py` performs topic analyses of the interesting articles, comparing non-negative matrix factorization with latent dirichlet allocation. They do a reasonable job of identifying common themes, including brain research, health research, science, technology, politics, testing, and, of course, data science.
 
